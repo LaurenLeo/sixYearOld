@@ -15,8 +15,8 @@
     <button ng-class="fancier" ng-click="addWordMore()">more words with decorations</button>
    </div>
 
-  <span ng-repeat="word in wordList"> {{word.text}} </span>
-  <span ng-repeat="word in phraseList"> {{word.text}} </span>
+  <span ng-repeat="word in wordList track by $index"> {{word.text}} </span>
+  <span ng-repeat="word in phraseList track by $index"> {{word.text}} </span>
 
 
 
