@@ -3,20 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>six year old simulator</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
   </head>
-  <body ng-app="myApp">
+  <body ng-app="myApp" ng-controller="ourController">
 
     <h1>Six-year old simulator</h1>
    <div>
     <button ng-click="addWord()">words</button>
-    <button >words with decorations</button>
-    <button >more words</button>
-    <button >more words with decorations</button>
+    <button ng-class="fancy" ng-click="addWord()">words with decorations</button>
+    <button ng-click="addWordMore()">more words</button>
+    <button ng-class="fancier" ng-click="addWordMore()">more words with decorations</button>
    </div>
 
-  <span>word go here</span>
-
+  <span ng-repeat="word in wordList"> {{word.text}} </span>
+  <span ng-repeat="word in phraseList"> {{word.text}} </span>
 
 
 
