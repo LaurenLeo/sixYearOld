@@ -6,37 +6,64 @@ var app = angular.module('myApp', []);
     $scope.wordList = [];
     $scope.phraseList = [];
 
-    $scope.addWord = function(){
+    $scope.classColor = ['fancy', 'fancier'];
+
+// add style one word
+    $scope.addWordDec = function(){
       var item = $scope.words[Math.floor(Math.random()*$scope.words.length)];
-      $scope.wordList.push( item );
+      var style = $scope.classColor[Math.floor(Math.random()*$scope.classColor.length)];
+      var obj = {name: item, cls: style};
+      $scope.wordList.push(obj);
+
       }
 
+//  one word
+      $scope.addWord = function(){
+        var item = $scope.words[Math.floor(Math.random()*$scope.words.length)];
+        var obj = {name: item};
+        $scope.wordList.push(obj);
+        }
 
-// need to change this function to pull more words out of array
+
+// more words
       $scope.addWordMore = function(){
         var item = $scope.sentences[Math.floor(Math.random()*$scope.sentences.length)];
-        $scope.phraseList.push( item );
+        var obj = {name: item};
+        $scope.phraseList.push( obj );
         }
-      $scope.sentences = [{text: 'are we there yet?'},
-                          {text: 'he hit me'},
-                          {text: 'I do not want to'},
-                          {text: 'She hit me'},
-                          {text: 'I think its dead'},
-                          {text: 'I pooped'},
-                          {text: 'I am not tired'},
-                          {text: 'What is that?'}
+//style and more words
+          $scope.addWordMoreDec = function(){
+            var item = $scope.sentences[Math.floor(Math.random()*$scope.sentences.length)];
+            var style = $scope.classColor[Math.floor(Math.random()*$scope.classColor.length)];
+            var obj = {name: item, cls: style};
+            $scope.phraseList.push( obj );
+            }
+
+
+
+      $scope.sentences = ['are we there yet?',
+                          'he hit me',
+                          'I do not want to',
+                          'She hit me',
+                          'I think its dead',
+                          'I pooped',
+                          'I am not tired',
+                          'What is that?'
                           ]
 
 
-      $scope.words = [{text: 'yuck!'},
-              {text: 'mommy!'},
-              {text: 'daddy!'},
-              {text: 'why?'},
-              {text: 'ouch!'},
-              {text: 'wah!'},
-              {text: 'No!'},
-              {text: 'Yay'},
-              {text: 'Poop'}
+      $scope.words = ['yuck!',
+            'mommy!',
+            'daddy!',
+            'why?',
+            'ouch!',
+            'wah!',
+            'No!',
+            'Yay',
+            'Poop'
             ];
+
+
+
 })
 })();

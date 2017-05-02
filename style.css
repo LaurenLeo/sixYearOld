@@ -1,3 +1,30 @@
+
+body{
+  text-align: center;
+  background-image: url('images/bgpolkadot.jpeg')
+}
 h1 {
   color: blue;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 300%;
   }
+
+.fancy {
+  color: #00ff6b;
+  font-family: 'Love Ya Like A Sister', cursive;
+}
+
+.fancier {
+  font-family: 'Audiowide', cursive;
+  color: #f600ff;
+}
+
+button {
+  padding: 20px 30px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  background-color:	#ffe86f;
+  color: #d519d2;
+}

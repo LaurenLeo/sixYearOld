@@ -3,20 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>six year old simulator</title>
-<link rel="stylesheet" type="text/css" href="style.css">  
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Love+Ya+Like+A+Sister|Luckiest+Guy" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
   <body ng-app="myApp" ng-controller="ourController">
 
     <h1>Six-year old simulator</h1>
     <img src="images/happykid2.jpg">
    <div>
     <button ng-click="addWord()">words</button>
-    <button ng-class="fancy" ng-click="addWord()">words with decorations</button>
+    <button ng-click="addWordDec()">words with decorations</button>
     <button ng-click="addWordMore()">more words</button>
-    <button ng-class="fancier" ng-click="addWordMore()">more words with decorations</button>
+    <button ng-click="addWordMoreDec()">more words with decorations</button>
    </div>
 
-  <span ng-repeat="word in wordList track by $index"> {{word.text}} </span>
-  <span ng-repeat="word in phraseList track by $index"> {{word.text}} </span>
+  <span ng-class="word.cls" ng-repeat="word in wordList track by $index"> {{word.name}} </span>
+  <span ng-class="word.cls" ng-repeat="word in phraseList track by $index"> {{word.name}} </span>
 
 
 
