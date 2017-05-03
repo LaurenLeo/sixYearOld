@@ -12,11 +12,13 @@ h1 {
 .fancy {
   color: #00ff6b;
   font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 30px;
 }
 
 .fancier {
   font-family: 'Audiowide', cursive;
   color: #f600ff;
+  font-size: 30px;
 }
 
 button {
@@ -27,4 +29,9 @@ button {
   border-radius: 5px;
   background-color:	#ffe86f;
   color: #d519d2;
+  font-size: 20px;
+}
+
+span {
+  font-size: 30px;
 }
