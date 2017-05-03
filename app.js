@@ -40,7 +40,7 @@ var app = angular.module('myApp', []);
             }
 
 
-
+//these words dont need to be on the scope. they are just variables
       $scope.sentences = ['are we there yet?',
                           'he hit me',
                           'I do not want to',
